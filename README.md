@@ -97,3 +97,47 @@ Cada equipo entrega:
 ## Licencia
 
 MIT. Ver [LICENSE](LICENSE).
+
+## Tutor matemático multimodal
+
+Este proyecto combina las ideas **2 y 3** de la guía:
+
+- Resuelve problemas matemáticos con pasos numerados y verificaciones.
+- Permite ampliar únicamente el paso que el estudiante no entiende.
+- Analiza imágenes de diagramas, gráficas y esquemas junto con una pregunta.
+- Mantiene el historial de la conversación durante la sesión.
+
+## Configuración en Windows
+
+Desde la raíz del proyecto:
+
+```powershell
+py -m venv .venv
+.venv\Scripts\Activate.ps1
+pip install -r starter_code/requirements.txt
+copy starter_code\.env.ejemplo starter_code\.env
+```
+
+Edita `starter_code/.env` y sustituye `sk-tu-clave-personal` por la clave proporcionada por los organizadores.
+
+Verifica la conexión:
+
+```powershell
+python starter_code/verificar_setup.py
+```
+
+Ejecuta el tutor:
+
+```powershell
+python starter_code/tutor.py
+```
+
+Dentro del tutor:
+
+```text
+/imagen ruta/a/diagrama.png ¿Qué representa?
+/limpiar
+salir
+```
+
+Las rutas relativas deben resolverse desde la carpeta del proyecto. También puedes usar rutas absolutas.
